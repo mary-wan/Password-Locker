@@ -12,7 +12,7 @@ class TestCredential(unittest.TestCase):
         '''
         method to run before each test case.
         '''
-        self.new_credential = Credential("twitter","Maria", "maria@gmail.com","1234h")
+        self.new_credential = Credential("twitter","Maria","1234h")
         
     def tearDown(self):
         '''
@@ -27,7 +27,6 @@ class TestCredential(unittest.TestCase):
         
         self.assertEqual(self.new_credential.account,"twitter")
         self.assertEqual(self.new_credential.username,"Maria")
-        self.assertEqual(self.new_credential.email,"maria@gmail.com")
         self.assertEqual(self.new_credential.password,"1234h")
         
     def test_save_credential(self):
@@ -44,7 +43,7 @@ class TestCredential(unittest.TestCase):
         '''
         
         self.new_credential.save_credential()
-        credential_two =Credential("ig","kiki","kiki@gmail.com","uiop5")
+        credential_two =Credential("ig","kiki","uiop5")
         credential_two.save_credential()
         self.assertEqual(len(Credential.credentials_list),2)
         
@@ -53,7 +52,7 @@ class TestCredential(unittest.TestCase):
         test to check if we can find a credential by account name and display information
         '''
         self.new_credential.save_credential()
-        credential_two = Credential("ig","kiki","kiki@gmail.com","uiop5")
+        credential_two = Credential("ig","kiki","uiop5")
         credential_two.save_credential()
         
         credential_found = Credential.find_by_account("ig")
@@ -65,7 +64,7 @@ class TestCredential(unittest.TestCase):
         test to check if we can find a credential by account name 
         '''
         self.new_credential.save_credential()
-        credential_two = Credential("ig","kiki","kiki@gmail.com","uiop5")
+        credential_two = Credential("ig","kiki","uiop5")
         credential_two.save_credential()
         
         credential_exits = Credential.credential_exist("twitter")
@@ -84,7 +83,7 @@ class TestCredential(unittest.TestCase):
         '''
 
         self.new_credential.save_credential()
-        credential_two = Credential("ig","kiki","kiki@gmail.com","uiop5")
+        credential_two = Credential("ig","kiki","uiop5")
         credential_two.save_credential()
         self.new_credential.delete_credential()
         self.assertEqual(len(Credential.credentials_list),1)
