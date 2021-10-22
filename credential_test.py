@@ -71,4 +71,11 @@ class TestCredential(unittest.TestCase):
         credential_exits = Credential.credential_exist("twitter")
         self.assertTrue(credential_exits)
         
-   
+    def test_display_credentials(self):
+        '''
+        test to check that returns a list of all contacts saved is displayed
+        '''
+        
+        self.assertEqual(Credential.display_credential(),Credential.credentials_list)
+        
+  
