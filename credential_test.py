@@ -30,4 +30,45 @@ class TestCredential(unittest.TestCase):
         self.assertEqual(self.new_credential.email,"maria@gmail.com")
         self.assertEqual(self.new_credential.password,"1234h")
         
-  
+    def test_save_credential(self):
+        '''
+        test case to test if the credential is saved into the credential list
+        '''
+        
+        self.new_credential.save_credential()
+        self.assertEqual(len(Credential.credentials_list),1)
+        
+    def test_save_multiple(self):
+        '''
+        test to check if  multiple credentials objects to to the contact_list
+        '''
+        
+        self.new_credential.save_credential()
+        credential_two =Credential("ig","kiki","kiki@gmail.com","uiop5")
+        credential_two.save_credential()
+        self.assertEqual(len(Credential.credentials_list),2)
+        
+    def test_find_by_account(self):
+        '''
+        test to check if we can find a credential by account name and display information
+        '''
+        self.new_credential.save_credential()
+        credential_two = Credential("ig","kiki","kiki@gmail.com","uiop5")
+        credential_two.save_credential()
+        
+        credential_found = Credential.find_by_account("ig")
+        self.assertEqual(credential_found.username, credential_two.username)
+    
+    
+    def test_find_by_account(self):
+        '''
+        test to check if we can find a credential by account name 
+        '''
+        self.new_credential.save_credential()
+        credential_two = Credential("ig","kiki","kiki@gmail.com","uiop5")
+        credential_two.save_credential()
+        
+        credential_exits = Credential.credential_exist("twitter")
+        self.assertTrue(credential_exits)
+        
+   
