@@ -17,4 +17,35 @@ class Credential:
         Credential.credentials_list.append(self)
         
     
+    def find_by_account(cls,account):
+        '''
+        Method that takes in account name and returns credentials that match that account.
+
+        Args:
+            account: Account whose credentials to search for
+        Returns :
+            Credentials that match the account.
+        '''
+        for credential in cls.credentials_list:
+            if credential.account ==account:
+                return credential
+    
+    def credential_exist(cls,account):
+        '''
+        Method that checks if a crediantial exists from the credential list.
+        
+        Args:
+            account: Account whose credentials to search for
+        Returns :
+            Boolean: True or false
+        '''
+        
+        for credential in cls.credentials_list:
+            if credential.account ==account:
+                return True
+            
+        return False
+    
   
+                
+    
