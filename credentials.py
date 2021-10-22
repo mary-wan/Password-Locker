@@ -16,7 +16,7 @@ class Credential:
         '''
         Credential.credentials_list.append(self)
         
-    
+    @classmethod
     def find_by_account(cls,account):
         '''
         Method that takes in account name and returns credentials that match that account.
@@ -27,9 +27,9 @@ class Credential:
             Credentials that match the account.
         '''
         for credential in cls.credentials_list:
-            if credential.account ==account:
+            if credential.account == account:
                 return credential
-    
+    @classmethod
     def credential_exist(cls,account):
         '''
         Method that checks if a crediantial exists from the credential list.
@@ -41,16 +41,10 @@ class Credential:
         '''
         
         for credential in cls.credentials_list:
-            if credential.account ==account:
+            if credential.account == account:
                 return True
             
         return False
-    
-    def delete_credential(self):
-        '''
-        method deletes a saved credential from the credential_list
-        '''
-        Credential.credentials_list.remove(self)
         
     @classmethod
     def display_credential(cls):
@@ -58,5 +52,11 @@ class Credential:
         method that returns the saved credentials
         '''
         return cls.credentials_list
+    
+    def delete_credential(self):
+        '''
+        method deletes a saved credential from the credential_list
+        '''
+        Credential.credentials_list.remove(self)
                 
     
