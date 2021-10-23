@@ -66,6 +66,14 @@ def display_credential():
     '''
     return Credential.display_credential()
 
+def generate_password(password_length):
+    '''
+    Function that generates a random password 
+    '''
+    password = Credential.generate_password(password_length)
+
+    return password  
+
 def delete_credential(credential):
     '''
     Function to delete a credential
