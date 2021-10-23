@@ -11,7 +11,7 @@ class Credential:
         
     def save_credential(self):
         '''
-         method saves credential objects into credential_list
+         method saves credential into credential_list
         '''
         Credential.credentials_list.append(self)
         
