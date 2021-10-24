@@ -41,11 +41,11 @@ An application that helps the user manage passwords of various accounts and also
 * python3.6 -m pip install termcolor
 
 ### Running the Application
-    ```
-    $ chmod +x run.py
-        ./run.py
-        
-        ```
+```
+$ chmod +x run.py
+$ ./run.py
+
+```
 [Go Back to the top](#PasswordLocker)
 ## Technology Used
 * Python
