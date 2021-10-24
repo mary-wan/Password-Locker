@@ -45,14 +45,14 @@ $ ./run.py
 | :------------- | :----------: | -----------: |
 |  Wrong short code    | User enters wrong short code | An error is message is displayed    |
 |  Valid code    | User enters a  valid code   | action is executed |
-|  su   | User enters short code su  | User is prompted to create a passlock account|
-|  lg   | User enters short code lg  | User is prompted to log in to passlock account|
-|  ex   | User enters short code ex  | Exits password locker system|
-|  cc   | User enters short code cc  | User is prompted to create new credential|
-|  fc   | User enters short code fc  | User can serach for a credential|
-|  dc   | User enters short code dc  | Created  credentials are displayed|
-|  dl   | User enters short code dl  | User is enters account name of credential to delete|
-|  lo   | User enters short code lo  | User is logged out of the account|
+|  Signing up   | User enters short code su  | User is prompted to create a passlock account|
+|  login   | User enters short code lg  | User is prompted to log in to passlock account|
+|  Exit Password locker   | User enters short code ex  | Exits password locker system|
+|  Create credential   | User enters short code cc  | User is prompted to create new credential|
+|  Find credential   | User enters short code fc  | User can serach for a credential|
+|  Display credentials   | User enters short code dc  | Created  credentials are displayed|
+|  Delete specific credential   | User enters short code dl  | User is prompted to enter account name of credential to delete|
+|  log out   | User enters short code lo  | User is logged out of the account|
 
 ****
 
