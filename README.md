@@ -2,8 +2,8 @@
 #### By Mary Njenga
 ## Table of Content
 + [Description](#description)
-+ [Behaviour Driven Development](#Behaviour-Driven-Development)
 + [Installation Requirement](#Installation)
++ [Behaviour Driven Development](#Behaviour-Driven-Development)
 + [Technology Used](#technology-used)
 + [Licence](#licence)
 + [Authors Info](#authors-info)
@@ -16,21 +16,6 @@ An application that helps the user manage passwords of various accounts and also
 #### Before
 ![Site Image](img/site.png)
 
-## Behaviour Driven Development
-| Behaviour      | Input     | Output     |
-| :------------- | :----------: | -----------: |
-|  Wrong short code    | User enters wrong short code | An error is message is displayed    |
-|  Valid code    | User enters a  valid code   | action is executed |
-|  su   | User enters short code su  | User is prompted to create a passlock account|
-|  lg   | User enters short code lg  | User is prompted to log in to passlock account|
-|  ex   | User enters short code ex  | Exits password locker system|
-|  cc   | User enters short code cc  | User is prompted to create new credential|
-|  fc   | User enters short code fc  | User can serach for a credential|
-|  dc   | User enters short code dc  | Created  credentials are displayed|
-|  dl   | User enters short code dl  | User is enters account name of credential to delete|
-|  lo   | User enters short code lo  | User is logged out of the account|
-
-****
 ## Installation
 ### Requirements
 * python3.6
@@ -50,6 +35,23 @@ $ chmod +x run.py
 $ ./run.py
 
 ```
+
+## Behaviour Driven Development
+| Behaviour      | Input     | Output     |
+| :------------- | :----------: | -----------: |
+|  Wrong short code    | User enters wrong short code | An error is message is displayed    |
+|  Valid code    | User enters a  valid code   | action is executed |
+|  su   | User enters short code su  | User is prompted to create a passlock account|
+|  lg   | User enters short code lg  | User is prompted to log in to passlock account|
+|  ex   | User enters short code ex  | Exits password locker system|
+|  cc   | User enters short code cc  | User is prompted to create new credential|
+|  fc   | User enters short code fc  | User can serach for a credential|
+|  dc   | User enters short code dc  | Created  credentials are displayed|
+|  dl   | User enters short code dl  | User is enters account name of credential to delete|
+|  lo   | User enters short code lo  | User is logged out of the account|
+
+****
+
 [Go Back to the top](#PasswordLocker)
 ## Technology Used
 * Python
