@@ -10,7 +10,7 @@
 
 ****
 ## Description
-An application that helps the user manage passwords of various accounts and also help user to generate new passwords,dind and delete stored account login details 
+An application that helps the user manage passwords of various accounts and also help user to generate new passwords,find and delete stored account login details 
 
 #### Before
 ![Site Image](img/site.png)
