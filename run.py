@@ -91,11 +91,11 @@ def main():
     
         
        
-    # while True:
-    data = [[colored('Short Code  ','green'),colored('         Action ','green')],[colored("su","yellow"), "Sign up to create your password locker account"], [colored("lg","yellow"),"Have an account already, log in to your account"],[colored("ex","yellow"),"Exit Password Locker"]]
-    print(tabulate(data, headers='firstrow',tablefmt="grid"))
-    short_code = input().lower()
-    if short_code =="su":
+    while True:
+        data = [[colored('Short Code  ','green'),colored('         Action ','green')],[colored("su","yellow"), "Sign up to create your password locker account"], [colored("lg","yellow"),"Have an account already, log in to your account"],[colored("ex","yellow"),"Exit Password Locker"]]
+        print(tabulate(data, headers='firstrow',tablefmt="grid"))
+        short_code = input().lower()
+        if short_code =="su":
             print(colored("Sign up......","green"))
             print("Enter username")
             username = input()
@@ -108,54 +108,34 @@ def main():
             print('\n')
             
             print(colored("Please log in to your account to continue......","green"))
-            # print(colored("Log in......","green"))
+        
+        elif short_code =="lg": 
+            print(colored("Log in......","green"))
             print("Enter username")
             username = input()
             print("Enter password")
             password = input()
             if user_verification(username,password):
+                
                 print(colored(f"Hi {username}, What would you like to do?","yellow"))
                 print('\n')
-                  
                 data = [[colored('Short Code  ','green'),colored('         Action ','green')],[colored("cc","yellow"), "Create new credential"],[colored("fd","yellow"),"Find credentials"],[colored("dc","yellow"),"Display credentials"],[colored("dl","yellow"),"Delete credentials"],[colored("ex","yellow"),"Exit Password Locker"]]
                 print(tabulate(data, headers='firstrow',tablefmt="grid"))
-
             else: 
                 print(colored("Incorrect username or password.Please try again or sign up","red"))
                 print('\n') 
-            
-        # elif short_code =="ex":
-        #     print("*"*30)
-        #     print("logging out...")
-        #     print('\n')
-        #     print("*"*30)
-        #     print("Bye .......")
-        #     break
-    # elif short_code =="lg": 
-    #         print(colored("Log in......","green"))
-    #         print("Enter username")
-    #         username = input()
-    #         print("Enter password")
-    #         password = input()
-    #         if user_verification(username,password):
-    #             while True:
-    #                 print(colored(f"Hi {username}, What would you like to do?","yellow"))
-    #                 print('\n')
-    #                 data = [[colored('Short Code  ','green'),colored('         Action ','green')],[colored("cc","yellow"), "Create new credential"],[colored("fd","yellow"),"Find credentials"],[colored("dc","yellow"),"Display credentials"],[colored("dl","yellow"),"Delete credentials"],[colored("ex","yellow"),"Exit Password Locker"]]
-    #                 print(tabulate(data, headers='firstrow',tablefmt="grid"))
-
-    #         else: 
-    #             print(colored("Incorrect username or password.Please try again or sign up","red"))
-    #             print('\n') 
-    
-    elif short_code =="ex":
+                
+        elif short_code =="ex":
+            # print("*"*30)
+            # print("logging out...")
             print('\n')
             print("*"*30)
             print("Bye .......")
+            break
         
-    else: 
-        print(colored("I didn't get that. Please use one of the short codes","red"))
-        print('\n')
+        else: 
+            print(colored("I didn't get that. Please use one of the short codes","red"))
+            print('\n')
         
         
             
