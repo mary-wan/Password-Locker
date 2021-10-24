@@ -59,7 +59,7 @@ class Credential:
         '''
         method to generate a random password
         '''
-        char_password= string.ascii_letters+string.digits+string.punctuation
+        char_password= string.ascii_letters+string.digits
 
         #password
         password=''.join(random.choice(char_password)

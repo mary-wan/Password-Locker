@@ -116,7 +116,6 @@ def main():
                 
                 print('\n')
                 print(colored(f"Hi {username}, What would you like to do?","yellow"))
-                print('\n')    
                  
                 while True:
                     print('\n')
@@ -177,12 +176,10 @@ def main():
                     elif short_code == "dc":
                         if display_credential():
                             print(colored("Here is a list of all your credentials","green"))
-                            print('\n')
                             
                             for credential in display_credential():
                                 data = [[colored("Account","cyan"), f"{credential.account}"],[colored("Username","cyan"),f"{credential.username}"],[colored("Password","cyan"),f"{credential.password}"]]
                                 print(tabulate(data,tablefmt="grid"))
-                                print('\n')
                                 #   print(f"{credential.account} {credential.username} .....{credential.password}")
                         else:
                                 print('\n')
@@ -222,6 +219,8 @@ def main():
                 print(colored("Incorrect username or password.Please try again or sign up","red"))
                 
         elif short_code =="ex":
+            print('\n')
+            print(colored("Exiting........","green"))
             print("*"*30)
             print("Bye .......")
             break
