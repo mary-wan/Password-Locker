@@ -151,9 +151,10 @@ def main():
                             elif short_code == "gp":
                                     print("Enter your desired password length e.g 6")
                                     password_length = int(input())
-                                    save_credentials(create_credential(account_name,account_username,generate_password(password_length)))
+                                    generated_password = generate_password(password_length)
+                                    save_credentials(create_credential(account_name,account_username,generated_password))
                                     print('\n')
-                                    print(colored(f"Credential successfully created!!","yellow"))
+                                    print(colored(f"Credential successfully created!!. Your {account_name} password is {generated_password}","yellow"))
                                     break
                             else:
                                     print(colored("I didn't get that. Please use one of the short codes","red"))
@@ -207,12 +208,14 @@ def main():
                             print(colored("We could not find a credential in that account name","red"))
 
                     elif short_code =="lo":
-                        print("*"*30)
                         print(colored("logging out...","green"))
                         print('\n')
                         print("*"*30)
                         # print("Bye .......")
                         break
+                    
+                    else: 
+                        print(colored("I didn't get that. Please use one of the short codes","red"))
                         
             else: 
                 print('\n') 
