@@ -26,8 +26,12 @@ An application that helps the user manage passwords of various accounts and also
 * run `git clone https://github.com/mary-wan/Password-Locker.git`
 
 ### Package Installation Process
-* python3.6 -m pip install tabulate
-* python3.6 -m pip install termcolor
+Install required packages using the following commands:
+```
+$ python3.6 -m pip install tabulate
+$ python3.6 -m pip install termcolor
+
+```
 
 ### Running the Application
 ```
