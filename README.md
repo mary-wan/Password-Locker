@@ -25,7 +25,7 @@ An application that helps the user manage passwords of various accounts and also
 * Open terminal
 * run `git clone https://github.com/mary-wan/Password-Locker.git`
 
-### Package Installation Process
+### Dependencies Installation Process
 Install required packages using the following commands:
 ```
 $ python3.6 -m pip install tabulate
